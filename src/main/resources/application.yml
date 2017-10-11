@@ -1,6 +1,6 @@
 name: liupangpang
 bookTitle: springboot
-address: http://10.10.0.80:15150
+address: http://drowningfish.top:15150
 fundcps:
     hessian:
         url: ${fundcps.url}/hessian
