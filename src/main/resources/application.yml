@@ -1,0 +1,13 @@
+name: liupangpang
+bookTitle: springboot
+address: http://10.10.0.80:15150
+fundcps:
+    hessian:
+        url: ${fundcps.url}/hessian
+
+connection:
+    username: root
+    password: root
+server:
+  port: 15150
+

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<script type="text/javascript" src="/static/javascript/jquery-1.8.3.min.js"></script>
+<script>
+    var ctx = $("#ctx").val();
+</script>
+<body>
+<h3 th:text="|Hello,${name}.欢迎阅读《${bookTitle}》|"></h3>
+
+<form id="login" action="/hello/login" method="post">
+    <input type="hidden" id="ctx" value="${ctx}"/>
+    <input type="text" id="userName" name="userName" placeholder="请输入用户名"/><br />
+    <input type="password" id="password" name="password" placeholder="请输入密码"/><br />
+    <span id="tip" style="color: red" th:text="${tip}">666</span>
+    <input type="submit"/>
+</form>
+</body>
+</html>
