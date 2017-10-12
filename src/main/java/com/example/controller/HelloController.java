@@ -189,7 +189,7 @@ public class HelloController {
 //        map.addAttribute("signValue", sb.toString());
         String typeValue = request.getParameter("type");
         String type = "0".equals(typeValue) ? "person" : "corporation";
-        StringBuilder url = new StringBuilder("http://210.13.252.36/api/server/trans/url");
+        StringBuilder url = new StringBuilder("http://10.10.10.6/api/server/trans/url");
 //        StringBuilder url = new StringBuilder("http://localhost:18180/server/withdraw/");
         url.append("?appKey=").append(appKey)
                 .append("&sign=").append(sign)
@@ -238,7 +238,7 @@ public class HelloController {
             return mv;
         }
         String sign = SignUtils.sign(new String[]{appKey, secure, version, timestamp, userId});
-        StringBuilder url = new StringBuilder("http://210.13.252.36/api/server/pwdChange/url");
+        StringBuilder url = new StringBuilder("http://10.10.10.6/api/server/pwdChange/url");
         url.append("?appKey=").append(appKey)
                 .append("&sign=").append(sign)
                 .append("&version=").append(version)
