@@ -131,7 +131,7 @@ public class HelloController {
 //        map.addAttribute("signValue", sb.toString());
         String typeValue = request.getParameter("type");
         String type = "0".equals(typeValue) ? "person" : "corporation";
-        StringBuilder url = new StringBuilder("http://210.13.252.36/api/server/cust/");
+        StringBuilder url = new StringBuilder("http://10.10.10.6/api/server/cust/");
         url.append(type).append("/url?appKey=").append(appKey)
                 .append("&sign=").append(sign)
                 .append("&version=").append(version)
