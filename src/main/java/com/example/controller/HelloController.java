@@ -64,7 +64,7 @@ public class HelloController {
     }
 
 
-    @RequestMapping("/sign/index")
+    @RequestMapping("/")
     public String signIndex(Model map){
         map.addAttribute("address", address);
         return "sign";
