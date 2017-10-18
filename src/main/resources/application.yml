@@ -1,6 +1,6 @@
 name: liupangpang
 bookTitle: springboot
-address: http://drowningfish.top:15150
+address: http://drowningfish.top
 fundcps:
     hessian:
         url: ${fundcps.url}/hessian
@@ -9,5 +9,5 @@ connection:
     username: root
     password: root
 server:
-  port: 15150
+  port: 80
 
