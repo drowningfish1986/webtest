@@ -75,6 +75,10 @@
                 <td><input type="text" id="userId" name="userId" placeholder="请输入userId" style="width: 200px"/></td>
             </tr>
             <tr>
+                <td>redirectUrl：</td>
+                <td><input type="text" id="redirectUrlAcct" name="redirectUrlAcct" placeholder="请输入redirectUrl" style="width: 200px"/></td>
+            </tr>
+            <tr>
                 <td>客户类型：</td>
                 <td>
                     <input type="radio" name="type" value="0">个人&nbsp;&nbsp;&nbsp;&nbsp;
