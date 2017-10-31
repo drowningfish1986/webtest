@@ -49,7 +49,7 @@ public class SignAndTestController {
     }
 
     @RequestMapping(value = "/sign/form", method = RequestMethod.POST)
-    public void signForm(HttpServletRequest request, HttpServletResponse response, Model map) throws ServletException, IOException {
+    public ModelAndView signForm(HttpServletRequest request, HttpServletResponse response, Model map) throws ServletException, IOException {
         ModelAndView mv = new ModelAndView();
 
         String appKey = request.getParameter("appKey");
@@ -92,8 +92,7 @@ public class SignAndTestController {
                 .append("&redirectUrl=").append(redirectUrlAcct);
         System.out.println("url=" + url.toString());
         mv.setViewName("redirect:" + url.toString());
-        request.getRequestDispatcher("https://www.baidu.com").forward(request, response);
-//        return mv;
+        return mv;
 //        try {
 //            response.sendRedirect(url.toString());
 //        } catch (IOException e) {
