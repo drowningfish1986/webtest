@@ -2,6 +2,7 @@ package com.example.controller;
 
 import com.example.util.SignUtils;
 import com.example.util.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,10 @@ import java.io.IOException;
  */
 @Controller
 public class SignAndTestController {
+
+    @Value("${remoteServer}")
+    private String remoteServer;
+
     @RequestMapping("/sign/usual")
     public String signUsual(HttpServletRequest request, Model map){
 
@@ -28,7 +33,7 @@ public class SignAndTestController {
         String secure = request.getParameter("secure1");
         String version = request.getParameter("version1");
         String timestamp = request.getParameter("timestamp1");
-        String jsonData = request.getParameter("jsonData");
+        String jsonData = request.getParameter("jsonData1");
         if(StringUtils.isBlank(appKey)){
             return "appKey不能为空";
         }
@@ -52,12 +57,12 @@ public class SignAndTestController {
     public ModelAndView signForm(HttpServletRequest request, HttpServletResponse response, Model map) throws ServletException, IOException {
         ModelAndView mv = new ModelAndView();
 
-        String appKey = request.getParameter("appKey");
-        String secure = request.getParameter("secure");
-        String version = request.getParameter("version");
-        String timestamp = request.getParameter("timestamp");
-        String userId = request.getParameter("userId");
-        String redirectUrlAcct = request.getParameter("redirectUrlAcct");
+        String appKey = request.getParameter("appKey2");
+        String secure = request.getParameter("secure2");
+        String version = request.getParameter("version2");
+        String timestamp = request.getParameter("timestamp2");
+        String userId = request.getParameter("userId2");
+        String redirectUrlAcct = request.getParameter("redirectUrlAcct2");
         if(StringUtils.isBlank(appKey)){
             String msg = "appKey can't be blank";
             mv.setViewName("redirect:/errorpage?msg=" + msg);
@@ -83,7 +88,7 @@ public class SignAndTestController {
 //        map.addAttribute("signValue", sb.toString());
         String typeValue = request.getParameter("type");
         String type = "0".equals(typeValue) ? "person" : "corporation";
-        StringBuilder url = new StringBuilder("http://10.10.10.6/api/server/cust/");
+        StringBuilder url = new StringBuilder("http://").append(remoteServer).append("/api/server/cust/");
         url.append(type).append("/url?appKey=").append(appKey)
                 .append("&sign=").append(sign)
                 .append("&version=").append(version)
@@ -105,13 +110,13 @@ public class SignAndTestController {
     public ModelAndView signWithdraw(HttpServletRequest request, HttpServletResponse response, Model map){
         ModelAndView mv = new ModelAndView();
 
-        String appKey = request.getParameter("appKey");
-        String secure = request.getParameter("secure");
-        String version = request.getParameter("version");
-        String timestamp = request.getParameter("timestamp");
+        String appKey = request.getParameter("appKey3");
+        String secure = request.getParameter("secure3");
+        String version = request.getParameter("version3");
+        String timestamp = request.getParameter("timestamp3");
         String userId = request.getParameter("userId3");
-        String redirect = request.getParameter("redirect");
-        String orderNo = request.getParameter("orderNo");
+        String redirect = request.getParameter("redirect3");
+        String orderNo = request.getParameter("orderNo3");
         if(StringUtils.isBlank(appKey)){
             String msg = "appKey can't be blank";
             mv.setViewName("redirect:/errorpage?msg=" + msg);
@@ -142,7 +147,7 @@ public class SignAndTestController {
 //        map.addAttribute("signValue", sb.toString());
         String typeValue = request.getParameter("type");
         String type = "0".equals(typeValue) ? "person" : "corporation";
-        StringBuilder url = new StringBuilder("http://10.10.10.6/api/server/trans/url");
+        StringBuilder url = new StringBuilder("http://").append(remoteServer).append("/api/server/trans/url");
 //        StringBuilder url = new StringBuilder("http://localhost:18180/server/withdraw/");
         url.append("?appKey=").append(appKey)
                 .append("&sign=").append(sign)
@@ -169,10 +174,10 @@ public class SignAndTestController {
     public ModelAndView changePassword(HttpServletRequest request){
         ModelAndView mv = new ModelAndView();
 
-        String appKey = request.getParameter("appKey");
-        String secure = request.getParameter("secure");
-        String version = request.getParameter("version");
-        String timestamp = request.getParameter("timestamp");
+        String appKey = request.getParameter("appKey4");
+        String secure = request.getParameter("secure4");
+        String version = request.getParameter("version4");
+        String timestamp = request.getParameter("timestamp4");
         String userId = request.getParameter("userId4");
         String redirect = request.getParameter("redirect4");
         if(StringUtils.isBlank(appKey)){
@@ -191,7 +196,7 @@ public class SignAndTestController {
             return mv;
         }
         String sign = SignUtils.sign(new String[]{appKey, secure, version, timestamp, userId});
-        StringBuilder url = new StringBuilder("http://10.10.10.6/api/server/pwdChange/url");
+        StringBuilder url = new StringBuilder("http://").append(remoteServer).append("/api/server/pwdChange/url");
         url.append("?appKey=").append(appKey)
                 .append("&sign=").append(sign)
                 .append("&version=").append(version)
@@ -211,31 +216,5 @@ public class SignAndTestController {
         String msg = request.getParameter("msg");
         map.addAttribute("signValue", msg);
         return "result";
-    }
-
-    @RequestMapping("/sign/remote")
-    public String signUsualRemote(HttpServletRequest request){
-
-        String appKey = request.getParameter("appKey");
-        String secure = request.getParameter("secure");
-        String version = request.getParameter("version");
-        String timestamp = request.getParameter("timestamp");
-        String jsonData = request.getParameter("jsonData");
-        if(StringUtils.isBlank(appKey)){
-            return "appKey不能为空";
-        }
-        if(StringUtils.isBlank(timestamp)){
-            return "timestamp不能为空";
-        }
-        if(StringUtils.isBlank(jsonData)){
-            return "jsonData不能为空";
-        }
-        String sign = SignUtils.sign(new String[]{appKey, secure, version, timestamp, jsonData});
-        StringBuilder sb = new StringBuilder();
-        sb.append("appKey=").append(appKey)
-                .append("&sign=").append(sign)
-                .append("&version=").append(version)
-                .append("&amp;timestamp=").append(timestamp);
-        return sb.toString();
     }
 }

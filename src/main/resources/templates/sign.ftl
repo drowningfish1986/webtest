@@ -41,7 +41,7 @@
             </tr>
             <tr>
                 <td>json数据：</td>
-                <td><input type="text" id="jsonData" name="jsonData" placeholder="请输入jsonData"
+                <td><input type="text" id="jsonData1" name="jsonData1" placeholder="请输入jsonData"
                            style="height: 100px;width: 200px" /></td>
             </tr>
             <tr>
@@ -54,35 +54,35 @@
         <table border="1">
             <tr>
                 <td>商户识别号appKey：</td>
-                <td><input type="text" id="appKey" name="appKey" placeholder="请输入商户识别码"
+                <td><input type="text" id="appKey2" name="appKey2" placeholder="请输入商户识别码"
                            style="width: 200px"/></td>
             </tr>
             <tr>
                 <td>版本号：</td>
-                <td><input type="text" name="version" value="1.0.0"></td>
+                <td><input type="text" name="version2" value="1.0.0"></td>
             </tr>
             <tr>
                 <td>密钥：</td>
                 <td><input type="text" value="YjY1Y2NkNTA5MmU0MTFlN2FiYzRjZWMyNzhiNmI1MGE=" disabled="disabled"/>
-                    <input type="hidden" name="secure" value="YjY1Y2NkNTA5MmU0MTFlN2FiYzRjZWMyNzhiNmI1MGE=" /></td>
+                    <input type="hidden" name="secure2" value="YjY1Y2NkNTA5MmU0MTFlN2FiYzRjZWMyNzhiNmI1MGE=" /></td>
             </tr>
             <tr>
                 <td>时间戳：</td>
-                <td><input type="text" id="timestamp" name="timestamp" placeholder="请输入时间戳" style="width: 200px" /></td>
+                <td><input type="text" id="timestamp2" name="timestamp2" placeholder="请输入时间戳" style="width: 200px" /></td>
             </tr>
             <tr>
                 <td>userId：</td>
-                <td><input type="text" id="userId" name="userId" placeholder="请输入userId" style="width: 200px"/></td>
+                <td><input type="text" id="userId2" name="userId2" placeholder="请输入userId" style="width: 200px"/></td>
             </tr>
             <tr>
                 <td>redirectUrl：</td>
-                <td><input type="text" id="redirectUrlAcct" name="redirectUrlAcct" placeholder="请输入redirectUrl" style="width: 200px"/></td>
+                <td><input type="text" id="redirectUrlAcct2" name="redirectUrlAcct2" placeholder="请输入redirectUrl" style="width: 200px"/></td>
             </tr>
             <tr>
                 <td>客户类型：</td>
                 <td>
-                    <input type="radio" name="type" value="0">个人&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="type" value="1" checked="checked">企业<br>
+                    <input type="radio" name="type2" value="0">个人&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="type2" value="1" checked="checked">企业<br>
                 </td>
             </tr>
             <tr>
@@ -95,21 +95,21 @@
         <table border="1">
             <tr>
                 <td>商户识别号appKey：</td>
-                <td><input type="text" id="appKey" name="appKey" placeholder="请输入商户识别码"
+                <td><input type="text" id="appKey3" name="appKey3" placeholder="请输入商户识别码"
                            style="width: 200px"/></td>
             </tr>
             <tr>
                 <td>版本号：</td>
-                <td><input type="text" name="version" value="2.0.0"></td>
+                <td><input type="text" name="version3" value="2.0.0"></td>
             </tr>
             <tr>
                 <td>密钥：</td>
                 <td><input type="text" value="YjY1Y2NkNTA5MmU0MTFlN2FiYzRjZWMyNzhiNmI1MGE=" disabled="disabled"/>
-                    <input type="hidden" name="secure" value="YjY1Y2NkNTA5MmU0MTFlN2FiYzRjZWMyNzhiNmI1MGE=" /></td>
+                    <input type="hidden" name="secure3" value="YjY1Y2NkNTA5MmU0MTFlN2FiYzRjZWMyNzhiNmI1MGE=" /></td>
             </tr>
             <tr>
                 <td>时间戳：</td>
-                <td><input type="text" id="timestamp" name="timestamp" placeholder="请输入时间戳" style="width: 200px" /></td>
+                <td><input type="text" id="timestamp3" name="timestamp3" placeholder="请输入时间戳" style="width: 200px" /></td>
             </tr>
             <tr>
                 <td>userId：</td>
@@ -117,21 +117,21 @@
             </tr>
             <tr>
                 <td>redirect：</td>
-                <td><input type="text" id="redirect" name="redirect" placeholder="请输入redirect" style="width: 200px"/></td>
+                <td><input type="text" id="redirect3" name="redirect3" placeholder="请输入redirect" style="width: 200px"/></td>
             </tr>
             <tr>
                 <td>orderNo：</td>
-                <td><input type="text" id="orderNo" name="orderNo" placeholder="请输入orderNo" style="width: 200px"/></td>
+                <td><input type="text" id="orderNo3" name="orderNo3" placeholder="请输入orderNo" style="width: 200px"/></td>
             </tr>
             <tr>
                 <td>客户类型：</td>
                 <td>
-                    <input type="radio" name="type" value="0">个人&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="type" value="1" checked="checked">企业<br>
+                    <input type="radio" name="type3" value="0">个人&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="type3" value="1" checked="checked">企业<br>
                 </td>
             </tr>
             <tr>
-                <td colspan="2"><button id="button2" onclick="ll();">提现页面跳转</button></td>
+                <td colspan="2"><button id="button3" onclick="ll();">提现页面跳转</button></td>
             </tr>
         </table>
     </form>
@@ -140,21 +140,21 @@
         <table border="1">
             <tr>
                 <td>商户识别号appKey：</td>
-                <td><input type="text" id="appKey" name="appKey" placeholder="请输入商户识别码"
+                <td><input type="text" id="appKey4" name="appKey4" placeholder="请输入商户识别码"
                            style="width: 200px"/></td>
             </tr>
             <tr>
                 <td>版本号：</td>
-                <td><input type="text" name="version" value="2.0.0"></td>
+                <td><input type="text" name="version4" value="2.0.0"></td>
             </tr>
             <tr>
                 <td>密钥：</td>
                 <td><input type="text" value="YjY1Y2NkNTA5MmU0MTFlN2FiYzRjZWMyNzhiNmI1MGE=" disabled="disabled"/>
-                    <input type="hidden" name="secure" value="YjY1Y2NkNTA5MmU0MTFlN2FiYzRjZWMyNzhiNmI1MGE=" /></td>
+                    <input type="hidden" name="secure4" value="YjY1Y2NkNTA5MmU0MTFlN2FiYzRjZWMyNzhiNmI1MGE=" /></td>
             </tr>
             <tr>
                 <td>时间戳：</td>
-                <td><input type="text" id="timestamp" name="timestamp" placeholder="请输入时间戳" style="width: 200px" /></td>
+                <td><input type="text" id="timestamp4" name="timestamp4" placeholder="请输入时间戳" style="width: 200px" /></td>
             </tr>
             <tr>
                 <td>userId：</td>
@@ -165,7 +165,7 @@
                 <td><input type="text" id="redirect4" name="redirect4" placeholder="请输入redirect" style="width: 200px"/></td>
             </tr>
             <tr>
-                <td colspan="2"><button id="button3" onclick="submit3();">修改密码页面跳转</button></td>
+                <td colspan="2"><button id="button4" onclick="submit3();">修改密码页面跳转</button></td>
             </tr>
         </table>
     </form>

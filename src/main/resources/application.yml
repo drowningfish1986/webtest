@@ -1,6 +1,7 @@
 name: liupangpang
 bookTitle: springboot
-address: 
+address:
+remoteServer: 10.10.10.6
 fundcps:
     hessian:
         url: ${fundcps.url}/hessian
