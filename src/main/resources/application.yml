@@ -1,6 +1,6 @@
 name: liupangpang
 bookTitle: springboot
-address: 120.92.114.155
+address: 
 fundcps:
     hessian:
         url: ${fundcps.url}/hessian
