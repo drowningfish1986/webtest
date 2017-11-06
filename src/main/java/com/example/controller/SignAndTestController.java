@@ -88,7 +88,7 @@ public class SignAndTestController {
 //        map.addAttribute("signValue", sb.toString());
         String typeValue = request.getParameter("type");
         String type = "0".equals(typeValue) ? "person" : "corporation";
-        StringBuilder url = new StringBuilder("http://").append(remoteServer).append("/api/server/cust/");
+        StringBuilder url = new StringBuilder("https://").append(remoteServer).append("/api/server/cust/");
         url.append(type).append("/url?appKey=").append(appKey)
                 .append("&sign=").append(sign)
                 .append("&version=").append(version)
@@ -147,7 +147,7 @@ public class SignAndTestController {
 //        map.addAttribute("signValue", sb.toString());
         String typeValue = request.getParameter("type");
         String type = "0".equals(typeValue) ? "person" : "corporation";
-        StringBuilder url = new StringBuilder("http://").append(remoteServer).append("/api/server/trans/url");
+        StringBuilder url = new StringBuilder("https://").append(remoteServer).append("/api/server/trans/url");
 //        StringBuilder url = new StringBuilder("http://localhost:18180/server/withdraw/");
         url.append("?appKey=").append(appKey)
                 .append("&sign=").append(sign)
@@ -196,7 +196,7 @@ public class SignAndTestController {
             return mv;
         }
         String sign = SignUtils.sign(new String[]{appKey, secure, version, timestamp, userId});
-        StringBuilder url = new StringBuilder("http://").append(remoteServer).append("/api/server/pwdChange/url");
+        StringBuilder url = new StringBuilder("https://").append(remoteServer).append("/api/server/pwdChange/url");
         url.append("?appKey=").append(appKey)
                 .append("&sign=").append(sign)
                 .append("&version=").append(version)
